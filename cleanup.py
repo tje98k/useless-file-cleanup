@@ -47,7 +47,10 @@ elif trashanswer == 'y':
             os.remove(trashfile)
             print('Deleted file ' + trashfile)
 else:
-    print('please either type "y" or "n"')
+    while trashanswer != 'y' and trashanswer != 'n':
+        print('please either type "y" or "n"')
+        trashanswer = input()
+
         
 print('now checking on ' + path + ' for duplicate files')
 
@@ -89,5 +92,7 @@ elif dupanswer == 'y':
             os.remove(duplicatefile)
             print('Deleted file ' + duplicatefile)
 else:
-    print('please either type "y" or "n"')
+    while dupanswer != 'y' and dupanswer != 'n':
+        print('please either type "y" or "n"')
+        dupanswer = input()
 
